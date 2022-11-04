@@ -1,5 +1,5 @@
-﻿using Core;
-using Enpiech.Audio.Runtime.Data;
+﻿using Enpiech.Audio.Runtime.Data;
+using Enpiech.Core.Runtime;
 using UnityEngine;
 
 namespace Enpiech.Audio.Runtime

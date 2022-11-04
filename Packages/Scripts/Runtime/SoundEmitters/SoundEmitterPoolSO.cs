@@ -1,5 +1,5 @@
-﻿using Core.Factory;
-using Core.Pool;
+﻿using Enpiech.Core.Runtime.Factory;
+using Enpiech.Core.Runtime.Pool;
 using UnityEngine;
 
 namespace Enpiech.Audio.Runtime.SoundEmitters

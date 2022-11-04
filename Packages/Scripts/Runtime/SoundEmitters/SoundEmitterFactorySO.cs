@@ -1,4 +1,4 @@
-﻿using Core.Factory;
+﻿using Enpiech.Core.Runtime.Factory;
 using UnityEngine;
 
 namespace Enpiech.Audio.Runtime.SoundEmitters
