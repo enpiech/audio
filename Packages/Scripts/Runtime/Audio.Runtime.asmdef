@@ -1,14 +1,19 @@
 {
-  "name": "Audio.Editor",
+  "name": "Audio.Runtime",
   "rootNamespace": "Enpiech.Audio",
   "references": [
+    "Core",
+    "NaughtyAttributes.Core",
+    "NaughtyAttributes.Editor",
+    "UnityAtoms.UnityAtomsBaseAtoms.Editor",
+    "UnityAtoms.UnityAtomsBaseAtoms.Runtime",
     "UnityAtoms.UnityAtomsCore.Editor",
     "UnityAtoms.UnityAtomsCore.Runtime",
-    "Audio.Runtime"
+    "DOTween.Modules",
+    "UniTask",
+    "UniTask.DOTween"
   ],
-  "includePlatforms": [
-    "Editor"
-  ],
+  "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": false,
