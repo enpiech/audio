@@ -3,7 +3,7 @@
 namespace Enpiech.Audio.Runtime.Data
 {
     [Serializable]
-    public readonly struct AudioCueKey
+    public readonly struct AudioCueKey : IEquatable<AudioCueKey>
     {
         public static AudioCueKey Invalid = new(-1, null);
         private readonly AudioCueSO? _audioCue;
@@ -16,18 +16,19 @@ namespace Enpiech.Audio.Runtime.Data
             _audioCue = audioCue;
         }
 
+        public bool Equals(AudioCueKey other)
+        {
+            return Equals(_audioCue, other._audioCue) && _value == other._value;
+        }
+
         public override bool Equals(object obj)
         {
-            return obj is AudioCueKey x && _value == x._value && _audioCue == x._audioCue;
+            return obj is AudioCueKey other && Equals(other);
         }
 
         public override int GetHashCode()
         {
-            if (_audioCue == null)
-            {
-                return _value.GetHashCode();
-            }
-            return _value.GetHashCode() ^ _audioCue.GetHashCode();
+            return HashCode.Combine(_audioCue, _value);
         }
 
         public static bool operator ==(AudioCueKey x, AudioCueKey y)
